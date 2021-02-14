@@ -1,0 +1,211 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html>
+
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<title>A letter to ❤呆宝</title>
+	<link type="text/css" rel="stylesheet" href="./renxi/default.css">
+	<script type="text/javascript" src="./renxi/jquery.min.js"></script>
+	<script type="text/javascript" src="./renxi/jscex.min.js"></script>
+	<script type="text/javascript" src="./renxi/jscex-parser.js"></script>
+	<script type="text/javascript" src="./renxi/jscex-jit.js"></script>
+	<script type="text/javascript" src="./renxi/jscex-builderbase.min.js"></script>
+	<script type="text/javascript" src="./renxi/jscex-async.min.js"></script>
+	<script type="text/javascript" src="./renxi/jscex-async-powerpack.min.js"></script>
+	<script type="text/javascript" src="./renxi/functions.js" charset="utf-8"></script>
+	<script type="text/javascript" src="./renxi/love.js" charset="utf-8"></script>
+	<style type="text/css"></style>
+</head>
+
+<body>
+	<audio autoplay="autopaly" loop="loop">
+		<source src="bg_music.mp3" type="audio/mp3" />
+	</audio>
+	<div id="main">
+		<div id="error">本页面采用HTML5编辑，目前您的浏览器无法显示，请换成谷歌(<a
+				href="http://www.google.cn/chrome/intl/zh-CN/landing_chrome.html?hl=zh-CN&brand=CHMI">Chrome</a>)或者火狐(<a
+				href="http://firefox.com.cn/download/">Firefox</a>)浏览器，或者其他游览器的最新版本。</div>
+		<div id="wrap">
+			<div id="text">
+				<div id="code">
+					<font color="black" size="3"><b>
+							<span class="say"> 这是🐖🐖写给韩宇菲的第一封信！</span><br>
+							<span class="say"> 不知道是什么时候起喜欢上这个可爱的猪猪女孩</span><br>
+							<span class="say"> 也许是在刺眼的午后图书馆</span><br>
+							<span class="say"> 或是在寒夜里一起漫步西操</span><br>
+							<span class="say"> 还可能是在看到生日贺卡的那一刻！（www男孩子也会哭）</span><br>
+							<span class="say"> 等我回想起来，仿佛呆呆已经出现在我的生活中很久很久了</span><br>
+							<span class="say"> 总是习惯去贴紧我的宝贝，zhan在身上，或是像头🐖一样拱你</span><br>
+							<span class="say"> 总喜欢看韩宇菲睡着的样子，喜欢摸摸头，真的好乖！！！</span><br>
+							<span class="say"> 我喜欢着和呆呆一起度过的每一刻时光</span><br>
+							<span class="say"> 所以，在某次韩宇菲不知是第几回发出猪叫的时候</span><br>
+							<span class="say"> 我决定把这一切都记录下来，呆呆记事本的诞生！！！</span><br>
+							<span class="say"> （呆呆欺负我也要认真记录下来！）</span><br>
+							<span class="say"> 分开的31天，每一天都很想念，想听呆呆讲故事，但总是笑场</span><br>
+							<span class="say"> 还想听呆呆的"虎狼之词"，虽然每次都听到都脸红心跳</span><br>
+							<span class="say"> 会更加想念qaq，但一想到还有两周就可以再见到宝贝</span><br>
+							<span class="say"> 就感觉生活中得一切都变得光亮起来</span><br>
+							<span class="say"> 我期盼过未来的种种，其中最令我欢喜的</span><br>
+							<span class="say"> 便是与你一同共赴</span><br>
+							<span class="say"> </span><br>
+							<span class="say"> ———— 爱你的壮壮 ————</span>
+						</b>
+					</font>
+				</div>
+			</div>
+			<div id="clock-box">
+				<span>
+					<font color="#666666"><span class="ai">这是壮壮与呆呆</span>在一起的</font>
+				</span>
+				<div id="clock"></div>
+			</div>
+			<canvas id="canvas" width="1100" height="680"></canvas>
+		</div>
+	</div>
+	<script>
+		(function () {
+			var canvas = $('#canvas');
+			if (!canvas[0].getContext) {
+				$("#error").show();
+				return false;
+			}
+			var width = canvas.width();
+			var height = canvas.height();
+			canvas.attr("width", width);
+			canvas.attr("height", height);
+			var opts = {
+				seed: {
+					x: width / 2 - 20,
+					color: "rgb(190, 26, 37)",
+					scale: 2
+				},
+				branch: [
+					[535, 680, 570, 250, 500, 200, 30, 100, [
+						[540, 500, 455, 417, 340, 400, 13, 100, [
+							[450, 435, 434, 430, 394, 395, 2, 40]
+						]],
+						[550, 445, 600, 356, 680, 345, 12, 100, [
+							[578, 400, 648, 409, 661, 426, 3, 80]
+						]],
+						[539, 281, 537, 248, 534, 217, 3, 40],
+						[546, 397, 413, 247, 328, 244, 9, 80, [
+							[427, 286, 383, 253, 371, 205, 2, 40],
+							[498, 345, 435, 315, 395, 330, 4, 60]
+						]],
+						[546, 357, 608, 252, 678, 221, 6, 100, [
+							[590, 293, 646, 277, 648, 271, 2, 80]
+						]]
+					]]
+				],
+				bloom: {
+					num: 700,
+					width: 1080,
+					height: 650,
+				},
+				footer: {
+					width: 1200,
+					height: 5,
+					speed: 10,
+				}
+			};
+			var tree = new Tree(canvas[0], width, height, opts);
+			var seed = tree.seed;
+			var foot = tree.footer;
+			var hold = 1;
+			canvas.click(function (e) {
+				var offset = canvas.offset(),
+					x, y;
+				x = e.pageX - offset.left;
+				y = e.pageY - offset.top;
+				if (seed.hover(x, y)) {
+					hold = 0;
+					canvas.unbind("click");
+					canvas.unbind("mousemove");
+					canvas.removeClass('hand');
+				}
+			}).mousemove(function (e) {
+				var offset = canvas.offset(),
+					x, y;
+				x = e.pageX - offset.left;
+				y = e.pageY - offset.top;
+				canvas.toggleClass('hand', seed.hover(x, y));
+			});
+			var seedAnimate = eval(Jscex.compile("async", function () {
+				seed.draw();
+				while (hold) {
+					$await(Jscex.Async.sleep(10));
+				}
+				while (seed.canScale()) {
+					seed.scale(0.95);
+					$await(Jscex.Async.sleep(10));
+				}
+				while (seed.canMove()) {
+					seed.move(0, 2);
+					foot.draw();
+					$await(Jscex.Async.sleep(10));
+				}
+			}));
+			var growAnimate = eval(Jscex.compile("async", function () {
+				do {
+					tree.grow();
+					$await(Jscex.Async.sleep(10));
+				}
+				while (tree.canGrow());
+			}));
+			var flowAnimate = eval(Jscex.compile("async", function () {
+				do {
+					tree.flower(2);
+					$await(Jscex.Async.sleep(10));
+				}
+				while (tree.canFlower());
+			}));
+			var moveAnimate = eval(Jscex.compile("async", function () {
+				tree.snapshot("p1", 240, 0, 610, 680);
+				while (tree.move("p1", 500, 0)) {
+					foot.draw();
+					$await(Jscex.Async.sleep(10));
+				}
+				foot.draw();
+				tree.snapshot("p2", 500, 0, 610, 680);
+				canvas.parent().css("background", "url(" + tree.toDataURL('image/png') + ")");
+				canvas.css("background", "#ffe");
+				$await(Jscex.Async.sleep(300));
+				canvas.css("background", "none");
+			}));
+			var jumpAnimate = eval(Jscex.compile("async", function () {
+				var ctx = tree.ctx;
+				while (true) {
+					tree.ctx.clearRect(0, 0, width, height);
+					tree.jump();
+					foot.draw();
+					$await(Jscex.Async.sleep(25));
+				}
+			}));
+			var textAnimate = eval(Jscex.compile("async", function () {
+				var together = new Date();
+				together.setFullYear(2015, (9 - 1), (2 - 1));
+				together.setHours(9);
+				together.setMinutes(00);
+				together.setSeconds(0);
+				together.setMilliseconds(0);
+				$("#code").show().typewriter();
+				$("#clock-box").fadeIn(500);
+				while (true) {
+					timeElapse(together);
+					$await(Jscex.Async.sleep(1000));
+				}
+			}));
+			var runAsync = eval(Jscex.compile("async", function () {
+				$await(seedAnimate());
+				$await(growAnimate());
+				$await(flowAnimate());
+				$await(moveAnimate());
+				textAnimate().start();
+				$await(jumpAnimate());
+			}));
+			runAsync().start();
+		})();
+	</script>
+</body>
+
+</html>
